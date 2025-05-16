@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "npm install  && npm install --prefix Frontend && npm run build --prefix Frontend",
-    "start": "node BackEnd/server.js",
-    "dev": "nodemon BackEnd/server.js"
+    "start": "node Backend/server.js",
+    "dev": "nodemon Backend/server.js"
   },
   "keywords": [],
   "author": "",
