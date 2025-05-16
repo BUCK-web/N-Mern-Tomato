@@ -1,0 +1,63 @@
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url("/header_img.png") no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.header .header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  color: white;
+  font-size: max(4vw, 22px);
+}
+.header-contents p {
+  color: white;
+  font-size: 0.8vw;
+}
+.header-contents button {
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  padding: 1vw 2.3vw;
+  background: white;
+  font-size: max(0.8vw, 13px);
+  border-radius: 50px;
+}
+
+@media (max-width: 970px) {
+  .header-contents p {
+    display: none;
+}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+    /* transform: translateY(50px); */
+  }
+  to {
+    opacity: 1;
+  }
+}
