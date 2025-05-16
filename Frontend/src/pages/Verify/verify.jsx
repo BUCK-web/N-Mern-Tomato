@@ -8,9 +8,9 @@ const Verify = () => {
     const scucees = SearchParams.get("success")
     const navigate = useNavigate()
     const orderId = SearchParams.get("orderId")
-    const url = 'http://localhost:5000'
+    const url = 'https://mern-tomato.onrender.com'
     const verifyPayment = async()=>{
-        const res = await axios.post("http://localhost:5000/api/payment/verify",{scucees,orderId})
+        const res = await axios.post("https://mern-tomato.onrender.com/api/payment/verify",{scucees,orderId})
         console.log(res.data.scucees);
         if (res.data.scucees) {
             setTimeout(() => {

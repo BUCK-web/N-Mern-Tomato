@@ -11,7 +11,7 @@ const Myorder = () => {
     const [Orders , setOrders ] = useState([])
     const FetchOrderData = async()=>{
         try {
-            const OrderData = await axios.get("http://localhost:5000/api/payment/getorder",{headers:{token}})
+            const OrderData = await axios.get("https://mern-tomato.onrender.com/api/payment/getorder",{headers:{token}})
             setOrders(OrderData.data.data)
         } catch (error) {
             console.log(error.message);

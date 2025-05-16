@@ -30,7 +30,7 @@ const PlaceOrder = () => {
     };
 
     let response = await axios.post(
-      `http://localhost:5000/api/payment/place`,
+      `https://mern-tomato.onrender.com/api/payment/place`,
       orderData,
       { headers: { token } }
     );

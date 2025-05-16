@@ -10,7 +10,7 @@ const StoreContextProvider = ({ children }) => {
 
 
   const mainFoodlist = async () => {
-    const Food_data = await fetch("http://localhost:5000/api/food/list");
+    const Food_data = await fetch("https://mern-tomato.onrender.com/api/food/list");
     const FoodRe = await Food_data.json();
     setfood_list(FoodRe.data);
   };
@@ -18,7 +18,7 @@ const StoreContextProvider = ({ children }) => {
   const loadCartData = async () => {
     if (!token) return;
     try {
-      const response = await axios.post("http://localhost:5000/api/cart/get", {headers: { token }});
+      const response = await axios.post("https://mern-tomato.onrender.com/api/cart/get", {headers: { token }});
       setCartItems(response.data.cartData)
     } catch (error) {
       console.error("Error loading cart data:", error.data);
@@ -46,7 +46,7 @@ const StoreContextProvider = ({ children }) => {
     }
 
     if (token) {
-      await axios.post("http://localhost:5000/api/cart/addToCart",{itemId},{headers:{token}})
+      await axios.post("https://mern-tomato.onrender.com/api/cart/addToCart",{itemId},{headers:{token}})
     }
   };
 
@@ -54,7 +54,7 @@ const StoreContextProvider = ({ children }) => {
   const removeFromCart = async (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     if (token) {
-      await axios.post("http://localhost:5000/api/cart/removeFromCart",{itemId},{headers:{token}})
+      await axios.post("https://mern-tomato.onrender.com/api/cart/removeFromCart",{itemId},{headers:{token}})
     }
   };
 

@@ -12,7 +12,7 @@ const Navbar = ({ setShowLogin }) => {
     const fetchProfile = async () => {
       try {
         const profileResponse = await fetch(
-          "http://localhost:5000/api/user/profile",
+          "https://mern-tomato.onrender.com/api/user/profile",
           {
             credentials: "include",
           }
@@ -31,7 +31,7 @@ const Navbar = ({ setShowLogin }) => {
     fetchProfile();
   }, []);
   const Logout = async ()=>{
-    const logouts = await fetch("http://localhost:5000/api/user/logout" , {credentials: "include"})
+    const logouts = await fetch("https://mern-tomato.onrender.com/api/user/logout" , {credentials: "include"})
     const profileData = await logouts.json();
     setUserProfile(null)
   }
