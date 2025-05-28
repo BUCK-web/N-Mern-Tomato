@@ -7,7 +7,7 @@ const Stripes = new Stripe(process.env.Stripe_Secret_key);
 // Placing user order From Frontend
 
 const placeOrder = async (req, res) => {
-    const FrontEnd_URL = "http://localhost:https://mern-tomato.onrender.com";
+    const FrontEnd_URL = "https://mern-tomato.onrender.com";
     try {
         const newOrder = await OrderModel.create({
             userId: req.body.userId,
